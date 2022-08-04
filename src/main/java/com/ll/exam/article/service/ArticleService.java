@@ -15,4 +15,21 @@ public class ArticleService {
     public List<ArticleDto> getArticles() {
         return articleRepository.getArticles();
     }
+
+    public long getArticlesCount(){
+        return articleRepository.getArticlesCount();
+    }
+
+    public ArticleDto getArticleById(long id) {
+        return articleRepository.getArticleById(id);
+    }
+
+    public long write(String title, String body, boolean isBlind) {
+        return articleRepository.write(title,body,isBlind);
+    }
+
+    public long modify(long id, String updateTitle, String updateBody, boolean isBlind) {
+        return articleRepository.modify(id,updateTitle,updateBody,isBlind);
+
+    }
 }
